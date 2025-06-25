@@ -1,3 +1,6 @@
 /node_modules
+<<<<<<< HEAD
 temp
+=======
+>>>>>>> c53fb5b49d8c1d4b7f782a23cbc0f8b4422a4790
 package-lock.json

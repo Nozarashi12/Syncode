@@ -13,11 +13,16 @@ app.use(express.json());
 
 app.use(
     cors({
+<<<<<<< HEAD
         origin: "*", // Allow frontend origin
+=======
+        origin: "*",//Allow frontend origin
+>>>>>>> c53fb5b49d8c1d4b7f782a23cbc0f8b4422a4790
         credentials: true, // Allow cookies & authentication headers
     })
 );
 
+<<<<<<< HEAD
 // ✅ Health check endpoint
 app.get("/", (req, res) => {
     res.send("✅ Server is up and running!");
@@ -31,6 +36,12 @@ app.use("/api/compiler", compilerRoutes); // Compiler routes
 app.use((req, res) => {
   res.status(404).json({ error: "Endpoint not found" });
 });
+=======
+// ✅ Correct API route paths
+app.use("/api/auth", authRoutes); // Authentication routes
+app.use("/api/compiler", compilerRoutes); // Compiler routes
+// app.use("/api/auth", compilercontroller);
+>>>>>>> c53fb5b49d8c1d4b7f782a23cbc0f8b4422a4790
 
 const PORT = process.env.PORT || 3020;
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
